@@ -112,6 +112,7 @@ getStrollerById = async (req, res) => {
 
 getStrollers = async (req, res) => {
   await Stroller.find({}, (err, strollers) => {
+    console.log(115, strollers)
     if (err) {
       return res.status(400).json({ success: false, error: err})
     }

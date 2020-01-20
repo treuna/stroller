@@ -1,0 +1,17 @@
+POST http://localhost:3000/api/stroller
+Content-type: application/json
+
+{
+  "name": "Emmaljunga",
+  "manufacturer": "Uno Edge",
+  "weight": 9,
+  "price": 1700,
+  "maxNumberOfSeats": 1,
+  "wheels": "WOOD",
+  "length": 900,
+  "depth": 700,
+  "height": 1600,
+  "lengthFolded": 500,
+  "depthFolded": 500,
+  "heightFolded": 250
+}
