@@ -34,7 +34,6 @@ createStroller = (req, res) => {
 
 updateStroller = async (req, res) => {
   const body = req.body
-
   if (!body) {
     return res.status(400).json({
       success: false,
@@ -61,7 +60,7 @@ updateStroller = async (req, res) => {
     stroller.lengthFolded = body.lengthFolded
     stroller.depthFolded = body.depthFolded
     stroller.heightFolded = body.heightFolded
-    strollers
+    stroller
       .save()
       .then(() => {
         return res.status(200).json({
@@ -112,7 +111,6 @@ getStrollerById = async (req, res) => {
 
 getStrollers = async (req, res) => {
   await Stroller.find({}, (err, strollers) => {
-    console.log(115, strollers)
     if (err) {
       return res.status(400).json({ success: false, error: err})
     }

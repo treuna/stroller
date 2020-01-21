@@ -23,7 +23,7 @@ const Delete = styled.div`
 class UpdateStroller extends Component {
   updateUser = event => {
     event.preventDefault()
-    window.location.href = `/strollers/update/${this.props.id}`
+    window.location.href = `/stroller/update/${this.props.id}`
   }
 
   render() {

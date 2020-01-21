@@ -104,7 +104,6 @@ class StrollersCreate extends Component {
   }
   handleIncludeStroller = async () => {
     const payload = { ...this.state }
-    console.log('payload', payload)
     await api.createStroller(payload).then(res => {
       window.alert(`Stroller created successfully`)
       this.setState({

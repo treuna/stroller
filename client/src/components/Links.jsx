@@ -29,7 +29,7 @@ class Links extends Component {
               </Link>
             </Item>
             <Item>
-              <Link to="/strollers/create" className="nav-link">
+              <Link to="/stroller/create" className="nav-link">
                 Create Stroller
               </Link>
             </Item>

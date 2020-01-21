@@ -12,8 +12,12 @@ function App() {
       <NavBar />
       <Switch>
         <Route path="/strollers/list" exact component={StrollersList} />
-        <Route path="/strollers/create" exact component={StrollersCreate} />
-        <Route path="/strollers/update:id" exact component={StrollersUpdate} />
+        <Route path="/stroller/create" exact component={StrollersCreate} />
+        <Route
+          path="/stroller/update/:id"
+          exact
+          component={StrollersUpdate}
+        />
       </Switch>
     </Router>
     )
