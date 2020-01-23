@@ -31,7 +31,7 @@ createStroller = (req, res) => {
       })
     })
 }
-
+//TODO LOOL
 updateStroller = async (req, res) => {
   const body = req.body
   if (!body) {

@@ -1,10 +1,9 @@
 const mongoose = require('mongoose')
-
-const dbRoute =
-  'mongodb+srv://trolly:Trollyl0l@cluster0-htsig.mongodb.net/test?retryWrites=true&w=majority'
+const dotenv = require('dotenv')
+dotenv.config()
 
 mongoose
-  .connect(dbRoute, { useNewUrlParser: true})
+  .connect(process.env.DB_ROUTE, { useNewUrlParser: true})
   .catch(e => {
     console.error('Connection erro', e.message)
   })
