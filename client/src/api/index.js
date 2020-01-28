@@ -1,7 +1,9 @@
 import axios from 'axios'
+const dotenv = require('dotenv')
+dotenv.config()
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: `http://${process.env.IP}:3000/api`,
 })
 
 export const createStroller = payload => api.post(`/stroller`, payload)
