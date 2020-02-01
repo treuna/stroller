@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.1",
     "bootstrap": "^4.4.1",
+    "path": "^0.12.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -17,10 +18,11 @@
     "styled-components": "^5.0.0"
   },
   "scripts": {
-    "start": "PORT=8000 react-scripts start",
-    "build": "react-scripts build",
+    "start": "PORT=8000 react-scripts start webpack --mode development",
+    "build": "react-scripts build webpack --mode production",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "webpack"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +38,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "dotenv-webpack": "^1.7.0",
+    "webpack": "4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "~3.9.0"
   }
 }

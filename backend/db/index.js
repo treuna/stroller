@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
-dotenv.config()
+const findConfig = require('find-config')
+dotenv.config({ path: findConfig(".env")})
 
 mongoose
   .connect(process.env.DB_ROUTE, { useNewUrlParser: true})

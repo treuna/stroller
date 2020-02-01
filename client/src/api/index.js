@@ -1,9 +1,6 @@
 import axios from 'axios'
-const dotenv = require('dotenv')
-dotenv.config()
-
 const api = axios.create({
-  baseURL: `http://${process.env.IP}:3000/api`,
+  baseURL:  process.env.REACT_APP_API_URL
 })
 
 export const createStroller = payload => api.post(`/stroller`, payload)

@@ -1,12 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const dotenv = require('dotenv')
+const findConfig = require('find-config')
+
+dotenv.config({ path: findConfig(".env")})
 
 const db = require('./db')
 const strollerRouter = require('./routes/stroller-router')
 
 const app = express()
-const apiPort = 3000
+const apiPort = process.env.BACKEND_PORT
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
